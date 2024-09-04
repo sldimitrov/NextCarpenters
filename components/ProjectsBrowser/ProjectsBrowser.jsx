@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Place from "./Place";
 
 export default function ProjectsBrowser({ items }) {
   const lastChange = useRef();
@@ -19,17 +20,25 @@ export default function ProjectsBrowser({ items }) {
     lastChange.current = setTimeout(() => {
       lastChange.current = null;
       setSearchTerm(event.target.value);
-    }, 500);
+    }, 200);
   }
 
   return (
     <div className="searchable-list">
       <input type="search" placeholder="Search" onChange={handleChange} />
-      <ul>
-        {searchResult.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
+      {searchResult.length > 0 ? (
+        <ul>
+          {searchResult.map((item) => (
+            <li key={item.id}>
+              <Place item={item} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-xl text-slate-400 text-center mt-3">
+          List of searches is empty...
+        </p>
+      )}
     </div>
   );
 }

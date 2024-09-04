@@ -1,0 +1,23 @@
+.place {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.place img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.place h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #58562a;
+}
+
+.place p {
+  margin: 0.5rem 0;
+  color: #b3b5c6;
+}

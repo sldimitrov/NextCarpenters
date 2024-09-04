@@ -6,31 +6,6 @@ body::after {
   opacity:0.8
 }
 
-@keyframes animateBefore {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(200px) scale(0.8);
-
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes animateAfter{
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-250px) scale(1.2);
-
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family:'Times New Roman', Times, serif;

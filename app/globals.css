@@ -2,60 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  /**/
-  /*other default setting ...*/
-  /**/
-    --secondary-glow: conic-gradient(
-      from 10deg at 50% 50%,
-      #ffffff 0deg,
-      #d96ee1 55deg,
-      #8093aa 120deg,
-      #0099ca 160deg,
-      transparent 360deg
-    );
-  
-    --third-glow: conic-gradient(
-      from 90deg at 50% 50%,
-      #ff8b7e 0deg,
-      #e24e6b 160deg,
-      #7ed2da 120deg,
-      #8bdce0 55deg,
-      transparent 360deg
-    );
-  }
-  
-  body::before {
-    background: var(--third-glow);
-    border-radius: 50%;
-    width: 50vw;
-    height: 50vw;
-    margin-left: -200px;
-    filter:blur(90px);  
-    top: calc(50vh - 50vw/2);
-    left: calc(50vw );
-  }
-  
-  body::after {
-    background: var(--secondary-glow);
-    border-radius: 50%;
-    width: 500px;
-    height: 700px;
-    filter:blur(90px);
-    top: calc(50vh - 50vw/2);
-    left: calc(50vw - 50vw/2);
-  }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
 }
-
 
 @layer utilities {
   .text-balance {
